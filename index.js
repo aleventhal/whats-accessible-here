@@ -4,8 +4,8 @@ var intersectionData;
 
 function init() {
     $.ajax({
-      //url: 'http://app.toronto.ca/opendata/cart/traffic_signals.xml?v=1.0',
-      url: 'traffic_signals.xml',
+      url: 'http://app.toronto.ca/opendata/cart/traffic_signals.xml?v=1.0',
+      // url: 'traffic_signals.xml',
       dataType: 'xml',
       // cache: false,  // What's the caching policy of the data from the server?
       error: function(xhr, errorText, errorObj) {
