@@ -1,0 +1,36 @@
+<!OOCTYPE html>
+<html>
+<head>
+  <title>What's accessible here?</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="./index.js"></script>
+</head>
+<style>
+  body { padding: 30px; }
+  #results { display: none; }
+  .cross { width: 50em; margin-bottom: 50px;}
+  .error {background-color: red; color: white; font-weight: bold;}
+</style>
+<body>
+<form id="cross-town-traffic">
+  <div>
+    <label for="cross1">Cross street #1</label>
+    <input type="text" id="cross1" class="cross">
+  </div>
+  <div>
+    <label for="cross2">Cross street #2</label>
+    <input type="text" id="cross2" class="cross">
+  </div>
+  <input type="submit">
+</form>
+<div id="results" aria-live="polite">
+  <div id="description">
+    The type of intersection at <span id="cross1-parsed"></span> and <span id="cross2-parsed"></span>:
+  </div>
+  <div id="type">
+  </div>
+  <div id="error">
+  </div>
+</div>
+</body>
+</html>
